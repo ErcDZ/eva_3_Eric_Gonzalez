@@ -25,7 +25,7 @@ class Comic(models.Model):
 class Reserva(models.Model):
     titulo_identificador = models.CharField(max_length=200, unique=True)
     codigo_reserva = models.PositiveIntegerField(unique=True, blank=True)
-    nombre_comic = models.CharField()
+    nombre_cliente = models.CharField()
     correo = models.EmailField(unique=True, blank=True)
     rut = models.PositiveIntegerField(unique=True)
     cantidad_ejemplares = models.PositiveIntegerField()
