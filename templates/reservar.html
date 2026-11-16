@@ -24,6 +24,25 @@
 
         <main>
 
+            <div class="row justify-content-center align-items-center g-2">
+                <div class="col-4"> 
+
+                    <img src="/media/{{ disponibilidad.portada }}" class="img-fluid rounded-start" alt="Title">
+                    {{ disponibilidad }} 
+                
+                </div>
+
+                    <div class="col">
+                        <form method="POST">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <a name="" id="" class="btn btn-danger" href="/" role="button">CANCELAR</a>
+                        <button type="submit" class="btn btn-success float-end">CONFIRMAR</button>
+                        </form>
+                    </div>
+
+            </div>
+
             
 
         </main>

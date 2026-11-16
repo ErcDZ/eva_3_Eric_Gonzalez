@@ -12,6 +12,8 @@ def reservar(request, id):
 
     form = formReserva()
 
+    form.fields['id_reserva'].initial = id
+
     disponibilidad = Comic.objects.get(id = id)
     data = {'disponibilidad': disponibilidad, 'form': form}
     return render(request, 'reservar.html', data)
