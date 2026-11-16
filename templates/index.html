@@ -26,6 +26,14 @@
 
             {% if disponibilidad %}
 
+                <div class="row justify-content-center align-items-center g-2 row-cols-4"> 
+                    
+                    {% for f in disponibilidad %}
+                    
+                        <div class="col">{{ f }}</div>
+
+                    {% endfor %}
+
             {% else %}
 
                 <div class="alert alert-warning text-center" role="alert">
