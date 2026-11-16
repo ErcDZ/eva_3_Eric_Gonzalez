@@ -4,6 +4,8 @@ from django.db import models
 class Editoriale(models.Model):
     nombre = models.CharField(max_length=100, unique=True)
 
+
+
     def __str__(self):
         return self.nombre
 
@@ -17,6 +19,8 @@ class Comic(models.Model):
     stock = models.PositiveIntegerField()
     disponible = models.BooleanField(default=False)
 
+    editorial = models.ForeignKey(Editoriale, on_delete=models.CASCADE)
+
     def __str__(self):
         return self.titulo
 
@@ -29,5 +33,7 @@ class Reserva(models.Model):
     cantidad_ejemplares = models.PositiveIntegerField()
     fecha_reserva = models.DateTimeField(blank=True, null=True)
 
+    comic = models.ForeignKey(Comic, on_delete=models.CASCADE)
+
     def __str__(self):
-        return self.codigo_reserva
+        return self.titulo_identificador
