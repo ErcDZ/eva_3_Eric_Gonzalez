@@ -7,6 +7,7 @@ from TiendaComic import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('reservar/<int:id>/', views.reservar),
 ]
 
 if settings.DEBUG:
