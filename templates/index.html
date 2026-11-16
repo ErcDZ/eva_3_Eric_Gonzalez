@@ -26,17 +26,21 @@
 
             {% if disponibilidad %}
 
-                <div class="row justify-content-center align-items-center g-2 row-cols-4"> 
+                <div class="row justify-content-center align-items-top g-2 row-cols-4"> 
                     
                     {% for f in disponibilidad %}
                     
                         <div class="col">
 
-                            <div class="card">
+                            <div class="card bg-dark text-white">
                                 <img class="card-img-top" src="media/{{ f.portada }}" alt="Title" />
-                                <div class="card-body">
-                                    <h4 class="card-title">Title</h4>
-                                    <p class="card-text">Body</p>
+                                <div class="card-body d-flex flex-column">
+                                    <h4 class="card-title">{{ f }}</h4>
+                                    <p class="card-text">{{ f.fecha_lanzamiento }} </p>
+                                    <p class="card-text">{{ f.precio }} </p>
+
+                                    <button class="btn btn-primary w-100" href="#" role="button">Reservar</button>
+
                                 </div>
                             </div>
                             
