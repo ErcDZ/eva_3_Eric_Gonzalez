@@ -15,11 +15,27 @@
         />
     </head>
 
-    <body>
+    <body class="container mt-3">
         <header>
-            <!-- place navbar here -->
+            <div class="alert alert-info text-center display-3" role="alert">
+                TIENDA DE COMICS
+            </div>
         </header>
-        <main>Test</main>
+
+        <main>
+
+            {% if funcion %}
+
+            {% else %}
+
+                <div class="alert alert-warning text-center" role="alert">
+                    No hay comics disponibles
+                </div>
+
+            {% endif %}
+
+        </main>
+
         <footer>
             <!-- place footer here -->
         </footer>
