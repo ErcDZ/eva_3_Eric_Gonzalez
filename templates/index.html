@@ -30,7 +30,18 @@
                     
                     {% for f in disponibilidad %}
                     
-                        <div class="col">{{ f }}</div>
+                        <div class="col">
+
+                            <div class="card">
+                                <img class="card-img-top" src="media/{{ f.portada }}" alt="Title" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">Body</p>
+                                </div>
+                            </div>
+                            
+
+                        </div>
 
                     {% endfor %}
 
