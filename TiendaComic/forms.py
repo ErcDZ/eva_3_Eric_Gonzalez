@@ -5,9 +5,9 @@ class formReserva(forms.Form):
 
     id_reserva = forms.CharField(widget=forms.HiddenInput)
     rut_Cliente  = forms.CharField()
-    email    = forms.CharField()
-    cantidad  = forms.IntegerField()
-    codigo   = forms.CharField()
+    email    = forms.CharField(required=False)
+    cantidad  = forms.IntegerField(min_value=1, max_value=3)
+    codigo   = forms.CharField(required=False)
 
     id_reserva.widget.attrs.update({'class': 'form-control'})
     rut_Cliente.widget.attrs.update({'class': 'form-control'})

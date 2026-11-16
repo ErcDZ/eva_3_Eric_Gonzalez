@@ -24,15 +24,23 @@
 
         <main>
 
-            <div class="row justify-content-center align-items-center g-2">
+            <div class="row justify-content-center align-items-top g-2">
                 <div class="col-4"> 
 
                     <img src="/media/{{ disponibilidad.portada }}" class="img-fluid rounded-start" alt="Title">
-                    {{ disponibilidad }} 
-                
+                    
+                    <p>    
+                        {{ disponibilidad }} 
+                        <br>{{ disponibilidad.fecha_lanzamiento }}
+                        <br>{{ disponibilidad.precio }}
+                    </p>
+
                 </div>
 
                     <div class="col">
+
+                        <h1 class="display-4">{{ disponibilidad.titulo }}</h1>
+
                         <form method="POST">
                         {% csrf_token %}
                         {{form.as_p}}
